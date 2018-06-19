@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HorsesPW"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Pferdezucht" Height="450" Width="800">
+
+        <Grid>
+            <TabControl Style="{StaticResource StyleTabControl}">
+
+                <!-- Start-Page -->
+                <TabItem Visibility="Collapsed" Style="{StaticResource StyleTabItem}">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Media/horse.png" Style="{StaticResource StyleImage}" />
+                            <TextBlock Text="Pferde" Style="{StaticResource StyleTextBlockBlue}" />
+                        </StackPanel>
+                    </TabItem.Header>
+
+                    <Grid Background="Yellow">
+                        <TextBlock Text="Startseite (nur 1x sichtbar)" />
+                    </Grid>
+                </TabItem>
+
+                <!-- Horses -->
+                <TabItem Style="{StaticResource StyleTabItem}">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Media/horse.png" Style="{StaticResource StyleImage}" />
+                            <TextBlock Text="Pferde" Style="{StaticResource StyleTextBlockBlue}" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+
+                <!-- Persons -->
+                <TabItem Style="{StaticResource StyleTabItem}">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Media/person.png" Style="{StaticResource StyleImage}" />
+                            <TextBlock Text="Personen" Style="{StaticResource StyleTextBlockBlue}" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+
+                <!-- Profile -->
+                <TabItem Style="{StaticResource StyleTabItem}">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Media/profile.png" Style="{StaticResource StyleImage}" />
+                            <TextBlock Text="Profil" Style="{StaticResource StyleTextBlockBlue}" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+            </TabControl>
+        </Grid>
 </Window>

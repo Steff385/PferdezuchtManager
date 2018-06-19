@@ -4,6 +4,57 @@
              xmlns:local="clr-namespace:HorsesPW"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <!-- TABCONTROL -->
+        <Style TargetType="TabControl" x:Key="StyleTabControl">
+            <Setter Property="Background" Value="Lavender" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="SelectedIndex" Value="0" />
+        </Style>
+
+        <!-- TABITEM -->
+        <Style TargetType="TabItem" x:Key="StyleTabItem">
+            <!-- Give TabItemHeaders a new design -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border x:Name="Border" BorderThickness="1" BorderBrush="Gainsboro" CornerRadius="4 4 0 0" Margin="0 0 2 0">
+                            <ContentPresenter ContentSource="Header" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand" Margin="10 2" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="PowderBlue" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True" />
+                                    <Condition Property="IsSelected" Value="False" />
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Border" Property="Background" Value="Lavender" />
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- IMAGE -->
+        <Style TargetType="Image" x:Key="StyleImage">
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Width" Value="25" />
+            <Setter Property="Margin" Value="0 0 5 0" />
+        </Style>
+
+        <!-- TEXTBLOCK ~ BLUE -->
+        <Style TargetType="TextBlock" x:Key="StyleTextBlockBlue">
+            <Setter Property="Foreground" Value="Blue" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
     </Application.Resources>
 </Application>

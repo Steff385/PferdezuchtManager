@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HorsesPW.Models
 {
-    public class HorseModel
+    class HorseModel
     {
     }
 }

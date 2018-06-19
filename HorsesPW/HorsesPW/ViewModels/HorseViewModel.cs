@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace HorsesPW.ViewModels
 {
-    public class HorseViewModel
+    class HorseViewModel
     {
-
     }
 }
